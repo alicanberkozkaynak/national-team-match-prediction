@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Milli Maç Skor Tahmini</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="badge">⚽ Yerel Yapay Zekâ Modeli</div>
+      <h1>Milli Maç Skor Tahmini</h1>
+      <p>Takımları ve maç türünü seç; model beklenen golleri, maç sonucu ihtimallerini ve en olası skorları hesaplasın.</p>
+    </header>
+
+    <section class="panel form-panel">
+      <form id="prediction-form">
+        <div class="teams-grid">
+          <label>Ev sahibi
+            <select id="home-team" required></select>
+          </label>
+          <button id="swap" class="swap" type="button" title="Takımları değiştir">⇄</button>
+          <label>Deplasman
+            <select id="away-team" required></select>
+          </label>
+        </div>
+        <div class="options-grid">
+          <label>Turnuva
+            <select id="tournament">
+              <option>Friendly</option>
+              <option>FIFA World Cup</option>
+              <option>World Cup qualification</option>
+              <option>UEFA Nations League</option>
+              <option>UEFA Euro</option>
+              <option>Continental tournament</option>
+            </select>
+          </label>
+          <label class="check-row"><input id="neutral" type="checkbox"><span>Tarafsız saha</span></label>
+        </div>
+        <button class="primary" type="submit">Tahmini Hesapla</button>
+      </form>
+      <div id="error" class="error hidden"></div>
+    </section>
+
+    <section id="result" class="result hidden">
+      <div class="match-title"><span id="result-home"></span><strong>vs</strong><span id="result-away"></span></div>
+      <div class="goals-grid">
+        <article class="panel stat"><span>Beklenen ev golü</span><strong id="xg-home">–</strong></article>
+        <article class="panel stat"><span>Beklenen deplasman golü</span><strong id="xg-away">–</strong></article>
+      </div>
+      <article class="panel">
+        <h2>Maç sonucu olasılıkları</h2>
+        <div id="probabilities" class="probabilities"></div>
+      </article>
+      <article class="panel">
+        <h2>En olası skorlar</h2>
+        <div id="scores" class="scores"></div>
+      </article>
+      <p id="meta" class="meta"></p>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

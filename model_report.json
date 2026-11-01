@@ -1,0 +1,52 @@
+{
+  "rows_total_results": 49495,
+  "rows_model_eligible": 5000,
+  "train_rows": 3975,
+  "test_rows": 1025,
+  "train_end_exclusive": "2025-06-10",
+  "test_start": "2025-06-10",
+  "best_model": "PoissonRegressor",
+  "best_pair_mae": 0.9331874649651475,
+  "best_rounded_exact_score_accuracy": 0.10341463414634146,
+  "leaderboard": [
+    {
+      "model": "PoissonRegressor",
+      "target": "home_score",
+      "mae": 1.018288937110857,
+      "rmse": 1.3440499759887858,
+      "mean_poisson_deviance": 1.1823741591211037
+    },
+    {
+      "model": "PoissonRegressor",
+      "target": "away_score",
+      "mae": 0.8480859928194381,
+      "rmse": 1.1737954093267255,
+      "mean_poisson_deviance": 1.1809197020286246
+    },
+    {
+      "model": "XGBRegressorPoisson",
+      "target": "home_score",
+      "mae": 1.0409231922103137,
+      "rmse": 1.3566734958124353,
+      "mean_poisson_deviance": 1.216606301975503
+    },
+    {
+      "model": "XGBRegressorPoisson",
+      "target": "away_score",
+      "mae": 0.8739127359739164,
+      "rmse": 1.2265305066784136,
+      "mean_poisson_deviance": 1.2626392416405554
+    }
+  ],
+  "model_summary": {
+    "PoissonRegressor": {
+      "pair_mae": 0.9331874649651475,
+      "rounded_exact_accuracy": 0.10341463414634146
+    },
+    "XGBRegressorPoisson": {
+      "pair_mae": 0.957417964092115,
+      "rounded_exact_accuracy": 0.09951219512195122
+    }
+  },
+  "fifa_missing_rows": 21147
+}

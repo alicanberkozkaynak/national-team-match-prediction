@@ -1,0 +1,33 @@
+{
+  "expected_home_goals": 1.221,
+  "expected_away_goals": 1.242,
+  "home_win_probability": 0.3588,
+  "draw_probability": 0.2724,
+  "away_win_probability": 0.3688,
+  "top_score_probabilities": [
+    {
+      "score": "1-1",
+      "probability": 0.1292
+    },
+    {
+      "score": "0-1",
+      "probability": 0.1057
+    },
+    {
+      "score": "1-0",
+      "probability": 0.104
+    },
+    {
+      "score": "0-0",
+      "probability": 0.0851
+    },
+    {
+      "score": "1-2",
+      "probability": 0.0802
+    }
+  ],
+  "model": "PoissonRegressor",
+  "as_of_date": "2026-07-04",
+  "fifa_snapshot_home": "2025-12-22",
+  "fifa_snapshot_away": "2025-12-22"
+}
